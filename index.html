@@ -19,6 +19,12 @@
             <span id="value2"></span><br />
             <span id="hover2"></span>
         </div>
+        <hr>
+        <span class="rateit small" id="rateit-3" data-rateit-value="1"></span>
+        <div>
+            <span id="value3"></span><br />
+            <span id="hover3"></span>
+        </div>
  
         <script type="text/javascript">
             $('#rateit-1').rateit({
@@ -43,7 +49,19 @@
             }).
               bind('rated', function (event, value) { $('#value2').text('value: ' + value); }).
               bind('reset', function () { $('#value2').text('Rating reset'); }).
-              bind('over', function (event, value) { $('#hover2').text('Hovering over: ' + value); });       
+              bind('over', function (event, value) { $('#hover2').text('Hovering over: ' + value); });
+
+            $('#rateit-3').rateit({
+              step: 0.1,
+              min:  0,
+              max:  5,
+              resetable: false,
+              starwidth: 12,
+              starheight: 12
+            }).
+              bind('rated', function (event, value) { $('#value3').text('value: ' + value); }).
+              bind('reset', function () { $('#value3').text('Rating reset'); }).
+              bind('over', function (event, value) { $('#hover3').text('Hovering over: ' + value); });       
          </script>
 
     </body>

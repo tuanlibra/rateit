@@ -93,6 +93,43 @@
     background: url(../images/star.gif) left -55px;
 }
 
+
+
+
+/*small star*/
+
+.rateit.small .rateit-range
+{
+    position: relative;
+    display: -moz-inline-box;
+    display: inline-block;
+    background: url(../images/star-small.png);
+    height: 12px;
+    outline: none;
+}
+
+.rateit.small .rateit-hover
+{
+    background: url(../images/star-small.png) left -12px;
+}
+
+.rateit.small .rateit-hover-rtl
+{
+    background-position: right -24px;
+}
+
+.rateit.small .rateit-selected
+{
+    background: url(../images/star-small.png) left -24px;
+}
+
+.rateit.small .rateit-selected-rtl
+{
+    background-position: right -12px;
+}
+
+/*big star*/
+
 .rateit button.rateit-reset
 {
     background: url(../images/delete.gif) 0 0;
