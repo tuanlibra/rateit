@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+        <script src="src/jquery.rateit.js" type="text/javascript"></script>
+        <link href="src/rateit.css" type="text/css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <span class="rateit bigstars" id="rateit-1" data-rateit-value="1"></span>
+        <div>
+            <span id="value1"></span><br />
+            <span id="hover1"></span>
+        </div>
+        <hr>
+        <span class="rateit" id="rateit-2" data-rateit-value="1"></span>
+        <div>
+            <span id="value2"></span><br />
+            <span id="hover2"></span>
+        </div>
+ 
+        <script type="text/javascript">
+            $('#rateit-1').rateit({
+              step: 0.1,
+              min:  0,
+              max:  5,
+              resetable: false,
+              starwidth: 32,
+              starheight: 32
+            }).
+              bind('rated', function (event, value) { $('#value1').text('value: ' + value); }).
+              bind('reset', function () { $('#value1').text('Rating reset'); }).
+              bind('over', function (event, value) { $('#hover1').text('Hovering over: ' + value); });
+
+            $('#rateit-2').rateit({
+              step: 0.1,
+              min:  0,
+              max:  5,
+              resetable: false,
+              starwidth: 16,
+              starheight: 16
+            }).
+              bind('rated', function (event, value) { $('#value2').text('value: ' + value); }).
+              bind('reset', function () { $('#value2').text('Rating reset'); }).
+              bind('over', function (event, value) { $('#hover2').text('Hovering over: ' + value); });       
+         </script>
+
+    </body>
+</html>

@@ -16,7 +16,7 @@
     position: relative;
     display: -moz-inline-box;
     display: inline-block;
-    background: url(../images/star.png);
+    background: url(../images/star.gif);
     height: 16px;
     outline: none;
 }
@@ -65,7 +65,7 @@
 
 .rateit .rateit-hover
 {
-    background: url(../images/star.png) left -36px;
+    background: url(../images/star.gif) left -16px;
 }
 
 .rateit .rateit-hover-rtl
@@ -75,7 +75,7 @@
 
 .rateit .rateit-selected
 {
-    background: url(../images/star.png) left -18px;
+    background: url(../images/star.gif) left -32px;
 }
 
 .rateit .rateit-selected-rtl
@@ -85,12 +85,12 @@
 
 .rateit .rateit-preset
 {
-    background: url(../images/star.png) left -55px;
+    background: url(../images/star.gif) left -55px;
 }
 
 .rateit .rateit-preset-rtl
 {
-    background: url(../images/star.png) left -55px;
+    background: url(../images/star.gif) left -55px;
 }
 
 .rateit button.rateit-reset
@@ -119,12 +119,12 @@ span.bigstars span.rateit-range
 
 span.bigstars span.rateit-hover
 {
-    background: url(../images/star-gold32.png);
+    background: url(../images/star-red32.png);
 }
 
 span.bigstars span.rateit-selected
 {
-    background: url(../images/star-red32.png);
+    background: url(../images/star-gold32.png);
 }
 
 span.bigstars div.rateit-reset:hover
