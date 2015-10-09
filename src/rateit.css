@@ -16,9 +16,38 @@
     position: relative;
     display: -moz-inline-box;
     display: inline-block;
-    background: url(../images/star.gif);
     height: 16px;
     outline: none;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    color: #F9A400;
+}
+
+.rateit .rateit-range:before {
+    content: "\fb98 \fb98 \fb98 \fb98 \fb98";
+}
+
+.rateit .rateit-hover:before
+{
+    content: "\fb99 \fb99 \fb99 \fb99 \fb99";
+}
+
+.rateit .rateit-selected:before
+{
+    content: "\fb99 \fb99 \fb99 \fb99 \fb99";
+}
+
+.rateit .rateit-reset:hover:before
+{
+    content: "\fb98 \fb98 \fb98 \fb98 \fb98";
 }
 
 .rateit .rateit-range * {
@@ -37,15 +66,6 @@
     display: inline;
 }
 
-.rateit.readonly-false .rateit-range {
-    cursor: pointer;
-    background: url(../images/star-white32.png);
-    height: 32px;
-    width:32px;
-}
-.rateit.readonly-false .rateit-hover, .rateit.readonly-false .rateit-selected {
-    background: url(../images/star-red32.png);
-}
 .rateit-desc {
     font-size: 16px;
     margin-left: 7px;
@@ -55,6 +75,13 @@
 {
     position: absolute;
     left: 0px;
+    top: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.rateit .rateit-hover {
+    display: none;
 }
 
 .rateit .rateit-hover-rtl, .rateit .rateit-selected-rtl
@@ -63,85 +90,30 @@
     right: 0px;
 }
 
-.rateit .rateit-hover
-{
-    background: url(../images/star.gif) left -16px;
-}
 
 .rateit .rateit-hover-rtl
 {
     background-position: right -32px;
 }
 
-.rateit .rateit-selected
-{
-    background: url(../images/star.gif) left -32px;
-}
 
 .rateit .rateit-selected-rtl
 {
     background-position: right -16px;
 }
 
-.rateit .rateit-preset
-{
-    background: url(../images/star.gif) left -55px;
-}
-
-.rateit .rateit-preset-rtl
-{
-    background: url(../images/star.gif) left -55px;
-}
-
-
-
 
 /*small star*/
 
 .rateit.small .rateit-range
 {
-    position: relative;
-    display: -moz-inline-box;
-    display: inline-block;
-    background: url(../images/star-small.png);
+    font-size: 12px;
     height: 12px;
-    outline: none;
 }
 
-.rateit.small .rateit-hover
-{
-    background: url(../images/star-small.png) left -12px;
-}
-
-.rateit.small .rateit-hover-rtl
-{
-    background-position: right -24px;
-}
-
-.rateit.small .rateit-selected
-{
-    background: url(../images/star-small.png) left -24px;
-}
-
-.rateit.small .rateit-selected-rtl
-{
-    background-position: right -12px;
-}
 
 /*big star*/
 
-.rateit button.rateit-reset
-{
-    background: url(../images/delete.gif) 0 0;
-    width: 16px;
-    height: 16px;
-    display: -moz-inline-box;
-    display: inline-block;
-    float: left;
-    outline: none;
-    border:none;
-    padding: 0;
-}
 
 .rateit button.rateit-reset:hover, .rateit button.rateit-reset:focus
 {
@@ -150,21 +122,25 @@
 
 span.bigstars span.rateit-range
 {
-    background: url(../images/star-white32.png);
+    font-size: 32px;
     height: 32px;
 }
 
-span.bigstars span.rateit-hover
-{
-    background: url(../images/star-red32.png);
+span.bigstars span.rateit-range:before {
+    content: "\fb98 \fb98 \fb98 \fb98 \fb98";
 }
 
-span.bigstars span.rateit-selected
+span.bigstars span.rateit-hover:before
 {
-    background: url(../images/star-gold32.png);
+    content: "\fb99 \fb99 \fb99 \fb99 \fb99";
 }
 
-span.bigstars div.rateit-reset:hover
+span.bigstars span.rateit-selected:before
 {
-    background: url(../images/star-white32.png);
+    content: "\fb99 \fb99 \fb99 \fb99 \fb99";
+}
+
+span.bigstars div.rateit-reset:hover:before
+{
+    content: "\fb98 \fb98 \fb98 \fb98 \fb98";
 }
